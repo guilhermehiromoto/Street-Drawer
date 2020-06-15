@@ -30,6 +30,15 @@ https://towardsdatascience.com/understanding-semantic-segmentation-with-unet-6be
 
 **Initial code with first results:** [Preprocessing Data](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/preprocessing.ipynb) and [Model Definition](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/training_model.ipynb)
 
+Preprocessed data:
+
+![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/preprocessed_images.png)
+
+Initial Prediction:
+
+![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/initial_predictions.png)
+Observacoes: Devido ao dataset extremamente reduzido (somente 36 imagens para elaborar um esboco do projeto) e a arquitetura nada otimizada da CNN, os outputs gerados pelo modelo tem um resultado muito abaixo do esperado.
+
 ## References
 
 [1] [Machine Learning for Aerial Image Labeling](https://www.cs.toronto.edu/~vmnih/docs/Mnih_Volodymyr_PhD_Thesis.pdf)
