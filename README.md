@@ -36,7 +36,7 @@ Preprocessed data:
 
 Initial Prediction:
 
-![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/initial_predictions.png)
+![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/initial_predictions.png)<br/>
 Observacoes: Devido ao dataset extremamente reduzido (somente 36 imagens para elaborar um esboco do projeto) e a arquitetura nada otimizada da CNN, os outputs gerados pelo modelo tem um resultado muito abaixo do esperado.
 
 ## References
