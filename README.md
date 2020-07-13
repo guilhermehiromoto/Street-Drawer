@@ -36,8 +36,9 @@ As loss function we used the binary cross entropy as we are dealing with a binar
 <br/>
 
 For our CNN, we used the U-net architeture to train our [model](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/training_model.ipynb):<br/>
-[[3]] (https://towardsdatascience.com/understanding-semantic-segmentation-with-unet-6be4f42d4b47)<br/>
+[[3]](https://towardsdatascience.com/understanding-semantic-segmentation-with-unet-6be4f42d4b47)<br/>
 This architeture is divided in two steps, first a **contraction path** that "downsample" the image with convolutions and maxpooling operations to **capture context in the image**, then a **expansion path** that upsample the image with transposed convolution used to **enable precise location**.
+![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/architeture.png?raw=true)
 
 **Initial code with first results:** [Preprocessing Data](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/preprocessing.ipynb) and [Model Definition](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/training_model.ipynb)
 
