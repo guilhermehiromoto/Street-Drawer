@@ -62,6 +62,8 @@ This architecture is divided in two steps, first a **contraction path** that "do
 #### Final Result:
 ![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/images/final_result.png)<br/>
 
+#### Work division:
+  We made pretty much everything together in video conference due to constantily researchs (together) and hardware restriction (high end GPU to train the model).  
 ## References
 
 [1] [Intersection-Over-Union Metric](https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-6bcb99639aa2)<br/>
