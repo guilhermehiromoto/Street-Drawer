@@ -9,7 +9,8 @@ Final project for SCC0251 - Image Processing
 11218959 - Guilherme Amaral Hiromoto<br/>
 11218855 - Victor Rodrigues Russo<br/>
 10892676 - Paulo Matana da Rocha<br/>
-
+ 
+**Development Explaning Video**: https://www.youtube.com/watch?v=ufjoYF1_uro
 
 ## Abstract
 
