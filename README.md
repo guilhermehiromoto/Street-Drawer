@@ -20,15 +20,15 @@ This project aims to detect road shapes in urban areas through the segmentation 
 
 ## Final Report
 
-**Main Objective:** As specified in abstract, this project aims to detect road shapes in urban areas through the segmentation of roads in satellite images using the [Road and Building Detection Dataset](https://www.cs.toronto.edu/~vmnih/data/) and CNN's to train a model that generates maps with the road shapes.
+<ins>**Main Objective:**</ins> As specified in abstract, this project aims to detect road shapes in urban areas through the segmentation of roads in satellite images using the [Road and Building Detection Dataset](https://www.cs.toronto.edu/~vmnih/data/) and CNN's to train a model that generates maps with the road shapes.
 
-**Input images:** Our input images were obtained from the [Road and Building Detection Dataset](https://www.cs.toronto.edu/~vmnih/data/) using the [Scraping Maps](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/maps/getting_data.ipynb) notebook for the sattelite images and [Scraping Masks](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/masks/getting_data.ipynb) notebook for the masks. As our images had 1500x1500 dimensions we preprocessed then with [Preprocessing](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/preprocessing.ipynb) notebook to fit in our U-net architeture (256x256).
+<ins>**Input images:**</ins> Our input images were obtained from the [Road and Building Detection Dataset](https://www.cs.toronto.edu/~vmnih/data/) using the [Scraping Maps](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/maps/getting_data.ipynb) notebook for the sattelite images and [Scraping Masks](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/masks/getting_data.ipynb) notebook for the masks. As our images had 1500x1500 dimensions we preprocessed then with [Preprocessing](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/preprocessing.ipynb) notebook to fit in our U-net architeture (256x256).
 
 #### Preprocessed data:
 
 ![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/preprocessed_images.png)
 
-**Description of steps:** For this project we are using a model-based methodology for Image Segmentation. We used the Intersection-Over-Union [[1]](https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-6bcb99639aa2) method as metric to train our model, that method consists of calculating an area of overlap between a predicted segmentation and the mask divided by the union area between a predicted segmentation and a mask.<br/>
+<ins>**Description of steps:**</ins> For this project we are using a model-based methodology for Image Segmentation. We used the Intersection-Over-Union [[1]](https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-6bcb99639aa2) method as metric to train our model, that method consists of calculating an area of overlap between a predicted segmentation and the mask divided by the union area between a predicted segmentation and a mask.<br/>
 
 As loss function we used the binary cross entropy as we are dealing with a binary "classifier":
 ![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/binary_cross_entropy.png?raw=true) [[2]](https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a)
@@ -36,18 +36,31 @@ As loss function we used the binary cross entropy as we are dealing with a binar
 <br/>
 
 For our CNN, we used the U-net architeture to train our [model](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/training_model.ipynb):<br/>
-[[3]](https://towardsdatascience.com/understanding-semantic-segmentation-with-unet-6be4f42d4b47)<br/>
 This architeture is divided in two steps, first a **contraction path** that "downsample" the image with convolutions and maxpooling operations to **capture context in the image**, then a **expansion path** that upsample the image with transposed convolution used to **enable precise location**.
 ![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/architeture.png?raw=true)
+[[3]](https://towardsdatascience.com/understanding-semantic-segmentation-with-unet-6be4f42d4b47)<br/>
 
-**Initial code with first results:** [Preprocessing Data](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/preprocessing.ipynb) and [Model Definition](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/training_model.ipynb)
+<ins>**Final Code with Results:**</ins><br/>
+-[Getting Data: Maps](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/maps/getting_data.ipynb)<br/>
+-[Getting Data: Masks](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/masks/getting_data.ipynb)<br/>
+-[Preprocessing Data](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/preprocessing.ipynb)<br/>
+-[Model Training and Results](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/training_model.ipynb)<br/>
 
 
 
-Initial Prediction:
+<ins> **Demonstration Results**:</ins>
+#### Prediction Comparation:
+![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/partial_prediction.png)<br/>
 
-![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/initial_predictions.png)<br/>
-Obs: Due to the extremely small dataset (only 36 images to elaborate the outline of the project) and an non-optimized architecture, the outputs generated by the model had a result much worse than expected.
+#### Cropped Inputs:
+![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/cropped_input.png)<br/>
+
+
+#### Cropped Predictions:
+![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/cropped_result.png)<br/>
+
+#### Final Result:
+![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/final_result.png)<br/>
 
 ## References
 
