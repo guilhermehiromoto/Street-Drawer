@@ -28,7 +28,11 @@ This project aims to detect road shapes in urban areas through the segmentation 
 
 ![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/images/preprocessed_images.png)
 
-<ins>**Description of steps:**</ins> For this project we are using a model-based methodology for Image Segmentation. We used the Intersection-Over-Union [[1]](https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-6bcb99639aa2) method as metric to train our model, that method consists of calculating an area of overlap between a predicted segmentation and the mask divided by the union area between a predicted segmentation and a mask.<br/>
+<ins>**Description of steps:**</ins> For this project we are using a model-based methodology for Image Segmentation. We used the Intersection-Over-Union [[1]](https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-6bcb99639aa2) method as metric to train our model. This method consists of calculating an area of overlap between a predicted segmentation and the mask divided by the union area between a predicted segmentation and a mask.<br/>
+
+<p align="center">
+  <img src="https://github.com/guilhermehiromoto/Street-Drawer/blob/master/images/iou.png" />
+</p>
 
 As loss function we used the binary cross entropy as we are dealing with a binary "classifier":
 ![](https://github.com/guilhermehiromoto/Street-Drawer/blob/master/images/binary_cross_entropy.png?raw=true) [[2]](https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a)
